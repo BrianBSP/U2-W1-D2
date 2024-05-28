@@ -19,7 +19,11 @@ hr {
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,6 +31,12 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 1em;
 }
 
 @media screen and (min-width: 800px) {
@@ -90,13 +100,28 @@ main {
   box-shadow: 0 3px 3px #444;
   padding: 2em 1em;
   margin-bottom: 1.5em;
+  padding-top: 220px;
 }
 @media screen and (min-width: 700px) {
   main {
     padding: 2em;
+    padding-top: 220px;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  main {
+    padding-top: 80px;
+  }
+}
+article img {
+  float: left;
+}
+.titolo-container {
+  position: relative;
+}
+.svg-container {
+  position: absolute;
+}
 section {
   background-color: #e3e3e3;
   padding: 1.5em 1em;
@@ -296,6 +321,11 @@ button {
     padding: 15px 30px;
   }
 }
+.titolo-h2 {
+  position: absolute;
+  top: 0;
+  transform: translate(0, -25%);
+}
 
 /* ELEMENTI NELL' ASIDE */
 aside h2 {
@@ -314,6 +344,9 @@ aside div {
 }
 
 @media screen and (min-width: 1200px) {
+  section {
+    height: 267px;
+  }
   aside div {
     display: inline-block;
     width: 33.333%;
@@ -329,7 +362,11 @@ aside div p:last-child {
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
@@ -385,4 +422,19 @@ footer a {
   .toTop {
     display: none;
   }
+}
+.chart-icon {
+  width: 75px;
+  height: 75px;
+  background-color: #d3d3d3;
+  color: purple;
+  opacity: 0.7;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.chart-icon svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
 }
