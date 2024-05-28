@@ -148,6 +148,13 @@ h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
 }
+h1 span {
+  display: inline-block;
+}
+
+h1 span img {
+  display: inline-block;
+}
 
 p,
 address,
@@ -218,8 +225,10 @@ ol {
   margin-left: 2em;
 }
 a {
-  color: #00a0c6;
+  color: rgb(130, 206, 238);
   font-weight: bold;
+  /* text-decoration: none;
+  text-transform: none; */
 }
 strong {
   color: #a02571;
@@ -358,6 +367,16 @@ aside div p:last-child {
   font-size: 0.8em;
   text-align: right;
 }
+.articoli-correlati {
+  position: relative;
+}
+.fas.fa-tag {
+  font-size: 5rem;
+  color: grey;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 
 /* FOOTER */
 footer {
@@ -423,18 +442,86 @@ footer a {
     display: none;
   }
 }
+.chart-icon:nth-of-type(1) {
+  width: 75px;
+  height: 75px;
+  background-color: #ffffff;
+  color: blue;
+  opacity: 0.4;
+  position: fixed;
+
+  right: 20px;
+  bottom: 190px;
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(174, 167, 167);
+}
+.chart-icon:nth-of-type(2) {
+  width: 75px;
+  height: 75px;
+  background-color: #ffffff;
+  color: blue;
+  opacity: 0.4;
+  position: fixed;
+
+  right: 20px;
+  bottom: 105px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(174, 167, 167);
+}
+@media screen and (min-width: 700px) {
+  .chart-icon:nth-of-type(1) {
+    width: 75px;
+    height: 75px;
+    background-color: #ffffff;
+    color: blue;
+    opacity: 0.4;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(174, 167, 167);
+    z-index: 999;
+  }
+  .chart-icon:nth-of-type(2) {
+    width: 75px;
+    height: 75px;
+    background-color: #ffffff;
+    color: blue;
+    opacity: 0.4;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(174, 167, 167);
+    z-index: 999;
+  }
+}
 .chart-icon {
   width: 75px;
   height: 75px;
-  background-color: #d3d3d3;
-  color: purple;
+  background-color: #ffffff;
+  /* fill: violet; */
+  /* color: violet; */
   opacity: 0.7;
   position: fixed;
   right: 20px;
   bottom: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(174, 167, 167);
 }
 .chart-icon svg {
   position: absolute;
   inset: 0;
   margin: auto;
+}
+a {
+  color: violet;
+  font-weight: bold;
 }
